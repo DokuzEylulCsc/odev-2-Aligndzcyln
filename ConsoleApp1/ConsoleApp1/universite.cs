@@ -10,7 +10,7 @@ namespace ConsoleApp1
     {
         private string universiteAdi;
         private List<ogrenci> ogrenciler;
-        public string UniversiteAdi
+        public string UniversiteAdi//üniversite adı ekleme
         {
             get
             {
@@ -21,7 +21,7 @@ namespace ConsoleApp1
                 universiteAdi = value;
             }
         }
-        public List<ogrenci> Ogrenciler
+        public List<ogrenci> Ogrenciler //ogrenci ekleme
         {
             get
             {
@@ -32,36 +32,9 @@ namespace ConsoleApp1
                 ogrenciler = value;
             }
         }
-        public ogrenci ogrenciAra(int no)
-        {
-            ogrenci t = null;
-            foreach(ogrenci a in ogrenciler)
-            {
-                if (int.Equals(a.OgrenciNo, no))
-                {
-                    t = a;
-                    break;
-                }
-            }
-            if (t == null) throw new ogrenciBulunamadi(no);
-            return t;
-        }
-        public ogrenci ogrenciAra(string isim)
-        {
-            ogrenci t = null;
-            foreach (ogrenci a in ogrenciler)
-            {
-                if (a.İsim == isim)
-                {
-                    t = a;
-                    break;
-                }
-            }
-            if (t == null) throw new ogrenciBulunamadi(isim);
-            return t;
-        }
+        
     }
-    public class fakulte
+    public class fakulte //fakülte ekleme
     {
         private string fakulteAdi;
         public string FakulteAdi
@@ -75,7 +48,7 @@ namespace ConsoleApp1
                 fakulteAdi = value;
             }
         }
-        private List<bolum> bolumler;
+        private List<bolum> bolumler;//fakülteye bölüm ekleme
         public List<bolum> Bolumler
         {
             get
@@ -90,7 +63,7 @@ namespace ConsoleApp1
 
 
     }
-    public class bolum
+    public class bolum//bölüme ders ekleme
     {
         private string bolumAdı;
         public string BolumAdi
@@ -116,7 +89,7 @@ namespace ConsoleApp1
                 dersler = value;
             }
         }
-        private List<string> ogrenciler;
+        private List<string> ogrenciler; //bölüme öğrenci ekleme
         public List<string> OgrenciAdi
         {
 
@@ -131,7 +104,7 @@ namespace ConsoleApp1
         }
 
     }
-    public class ders
+    public class ders //ders ekleme
     {
         private string dersAdi;
         public string DersAdi
@@ -145,7 +118,7 @@ namespace ConsoleApp1
                 dersAdi = value;
             }
         }
-        private List<string> ogretimElemanıAdi;
+        private List<string> ogretimElemanıAdi;//derse öğretim elemanı atama
         public List<string> OgretimElemanıAdi
         {
             get
@@ -157,7 +130,7 @@ namespace ConsoleApp1
                 ogretimElemanıAdi = value;
             }
         }
-        private List<string> ogrenciler;
+        private List<string> ogrenciler;//derse öğrenci ekleme
         public List<string> OgrenciAdi
         {
 
@@ -171,7 +144,7 @@ namespace ConsoleApp1
             }
         }
     }
-    public class sube
+    public class sube//şube ekleme
     {
         private string subeAdi;
         public string SubeAdi
@@ -186,7 +159,7 @@ namespace ConsoleApp1
             }
         }
     }
-    public class ogretimElemanı
+    public class ogretimElemanı//öğretim elemanı ekleme
     {
         private List<string> ogretimElemanıAdi;
         public List<string> OgretimElemanıAdi

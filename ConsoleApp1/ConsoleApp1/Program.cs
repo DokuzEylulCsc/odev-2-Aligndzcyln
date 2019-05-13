@@ -10,7 +10,7 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("universite ismi eklemek için 1 e silmek için 2 ye basın\n " +
+            Console.WriteLine("universite ismi eklemek için 1 basın\n " +
                 "bölüme öğretim elemanı atama için 3 e ve silme için 4 e\n " +
                 "ders açma için 5 e ve kapama için 6 ya\n" +
                 " derse öğretim elemanı atama için 7'ye ve değiştirme için 8 e\n " +
@@ -18,7 +18,7 @@ namespace ConsoleApp1
                 "bölümlere öğrenci kayıt etmek için 11 e ve silme için 12 ye\n");
             string degisken;
             int secim = 1;
-            try
+            try//try catch hata yakalama
             {
                 secim = Int32.Parse(Console.ReadLine());
             }
@@ -32,7 +32,7 @@ namespace ConsoleApp1
                 Console.WriteLine("Bir hata oluştu!");
             }
             
-            switch (secim)
+            switch (secim)//istenilen işlemi seçme
             {
                 case 1:
                     {
@@ -41,11 +41,7 @@ namespace ConsoleApp1
                         okul.UniversiteAdi = degisken;
                         break;
                     }
-                case 2:
-                    {
-
-                        break;
-                    }
+                
                 case 3:
                     {
                         degisken = Console.ReadLine();
@@ -56,7 +52,8 @@ namespace ConsoleApp1
                 case 4:
                     {
                         degisken = Console.ReadLine();
-
+                        ogretimElemanı eleman = new ogretimElemanı();
+                        eleman.OgretimElemanıAdi.Remove(degisken);
                         break;
                     }
                 case 5:
@@ -68,8 +65,7 @@ namespace ConsoleApp1
                     }
                 case 6:
                     {
-                        degisken = Console.ReadLine();
-
+                        
                         break;
                     }
                 case 7:
@@ -82,7 +78,8 @@ namespace ConsoleApp1
                 case 8:
                     {
                         degisken = Console.ReadLine();
-
+                        ders ders = new ders();
+                        ders.OgretimElemanıAdi.Remove(degisken);
                         break;
                     }
                 case 9:
@@ -95,6 +92,8 @@ namespace ConsoleApp1
                 case 10:
                     {
                         degisken = Console.ReadLine();
+                        ders ders = new ders();
+                        ders.OgrenciAdi.Remove(degisken);
 
                         break;
                     }
@@ -108,7 +107,8 @@ namespace ConsoleApp1
                 case 12:
                     {
                         degisken = Console.ReadLine();
-
+                        bolum Bolum = new bolum();
+                        Bolum.OgrenciAdi.Remove(degisken);
                         break;
                     }
 

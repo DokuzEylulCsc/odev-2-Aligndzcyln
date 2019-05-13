@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace ConsoleApp1
 {
     
-        class yazimHatasi : Exception
+        class yazimHatasi : Exception//yazımda oluşacak hatalar için exceptionlar
         {
             public yazimHatasi()
             {
