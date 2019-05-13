@@ -21,9 +21,16 @@ namespace ConsoleApp1
                 universiteAdi = value;
             }
         }
-        public void ekleogrenci(ogrenci o)
+        public List<ogrenci> Ogrenciler
         {
-            ogrenciler.Add(o);
+            get
+            {
+                return ogrenciler;
+            }
+            set
+            {
+                ogrenciler = value;
+            }
         }
         public ogrenci ogrenciAra(int no)
         {
@@ -109,6 +116,19 @@ namespace ConsoleApp1
                 dersler = value;
             }
         }
+        private List<string> ogrenciler;
+        public List<string> OgrenciAdi
+        {
+
+            get
+            {
+                return ogrenciler;
+            }
+            set
+            {
+                ogrenciler = value;
+            }
+        }
 
     }
     public class ders
@@ -123,6 +143,31 @@ namespace ConsoleApp1
             set
             {
                 dersAdi = value;
+            }
+        }
+        private List<string> ogretimElemanıAdi;
+        public List<string> OgretimElemanıAdi
+        {
+            get
+            {
+                return ogretimElemanıAdi;
+            }
+            set
+            {
+                ogretimElemanıAdi = value;
+            }
+        }
+        private List<string> ogrenciler;
+        public List<string> OgrenciAdi
+        {
+
+            get
+            {
+                return ogrenciler;
+            }
+            set
+            {
+                ogrenciler = value;
             }
         }
     }
